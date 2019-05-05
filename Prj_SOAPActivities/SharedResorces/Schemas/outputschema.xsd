@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/Prj_SOAPActivities/SharedResorces/Schemas/Schema1.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/Prj_SOAPActivities/SharedResorces/Schemas/Schema1.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="EmployeeDetails">
+		<xs:complexType>
+			<xs:sequence>
+
+	<xs:element name="cname" type="xs:string"/>
+	<xs:element name="clocation" type="xs:string"/>
+	<xs:element name="caccount" type="xs:string"/>
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
