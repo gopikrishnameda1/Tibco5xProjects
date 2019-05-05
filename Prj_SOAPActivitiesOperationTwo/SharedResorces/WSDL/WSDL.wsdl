@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns5="http://www.tibco.com/schemas/Prj_SOAPActivitiesOperationTwo/SharedResorces/Schemas/Schema.xsd2" xmlns:ns="http://www.tibco.com/schemas/Prj_SOAPActivities/SharedResorces/Schemas/Schema.xsd" xmlns:tns="http://xmlns.example.com/1556367796128" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.tibco.com/schemas/Prj_SOAPActivities/SharedResorces/Schemas/Schema1.xsd" xmlns:ns4="http://www.tibco.com/schemas/Prj_SOAPActivitiesOperationTwo/SharedResorces/Schemas/Schema1.xsd" xmlns:ns3="http://www.tibco.com/schemas/Prj_SOAPActivitiesOperationTwo/SharedResorces/Schemas/Schema.xsd" targetNamespace="http://xmlns.example.com/1556367796128">
+    <import namespace="http://www.tibco.com/schemas/Prj_SOAPActivities/SharedResorces/Schemas/Schema.xsd" location="../Schemas/inputschema.xsd"/>
+    <import namespace="http://www.tibco.com/schemas/Prj_SOAPActivitiesOperationTwo/SharedResorces/Schemas/Schema.xsd" location="../Schemas/inpuschema1.xsd"/>
+    <import namespace="http://www.tibco.com/schemas/Prj_SOAPActivitiesOperationTwo/SharedResorces/Schemas/Schema1.xsd"/>
+    <import namespace="http://www.tibco.com/schemas/Prj_SOAPActivities/SharedResorces/Schemas/Schema1.xsd" location="../Schemas/outputschema.xsd"/>
+    <import namespace="http://www.tibco.com/schemas/Prj_SOAPActivitiesOperationTwo/SharedResorces/Schemas/Schema.xsd2" location="../Schemas/inputschema2.xsd"/>
+    <message name="InputMessage">
+        <part name="inputmessage" element="ns:EmployeeData"/>
+    </message>
+    <message name="OutputMessage">
+        <part name="outputmessage" element="ns2:EmployeeDetails"/>
+    </message>
+    <message name="people1">
+        <part name="part1" element="ns3:People"/>
+    </message>
+    <message name="people2">
+        <part name="part1" element="ns5:peopledata"/>
+    </message>
+    <portType name="PortType">
+        <operation name="Operation">
+            <input message="tns:InputMessage"/>
+            <output message="tns:OutputMessage"/>
+        </operation>
+        <operation name="Operation1">
+            <input message="tns:people1"/>
+            <output message="tns:people2"/>
+        </operation>
+    </portType>
+</definitions>
